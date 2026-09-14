@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Dashboard | AI Experiment Hub
+{% endblock %}
+
+
+{% block content %}
+
+<section class="page-header">
+
+    <div>
+        <h2>Dashboard</h2>
+
+        <p>
+            Overview of your machine learning experiments.
+        </p>
+    </div>
+
+</section>
+
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+
+        <span class="stat-label">
+            Projects
+        </span>
+
+        <span class="stat-value">
+            {{ project_count }}
+        </span>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <span class="stat-label">
+            Experiments
+        </span>
+
+        <span class="stat-value">
+            {{ experiment_count }}
+        </span>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <span class="stat-label">
+            Completed
+        </span>
+
+        <span class="stat-value">
+            {{ completed_count }}
+        </span>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <span class="stat-label">
+            Running
+        </span>
+
+        <span class="stat-value">
+            {{ running_count }}
+        </span>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <span class="stat-label">
+            Failed
+        </span>
+
+        <span class="stat-value">
+            {{ failed_count }}
+        </span>
+
+    </div>
+
+</section>
+
+
+<section class="panel">
+
+    <div class="panel-header">
+
+        <h3>
+            Recent Experiments
+        </h3>
+
+    </div>
+
+
+    {% if recent_experiments %}
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <thead>
+                <tr>
+
+                    <th>
+                        Experiment
+                    </th>
+
+                    <th>
+                        Model
+                    </th>
+
+                    <th>
+                        Dataset
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                    <th>
+                        Accuracy
+                    </th>
+
+                    <th>
+                        Loss
+                    </th>
+
+                </tr>
+            </thead>
+
+
+            <tbody>
+
+                {% for experiment in recent_experiments %}
+
+                <tr>
+
+                    <td>
+                        {{ experiment.name }}
+                    </td>
+
+                    <td>
+                        {{ experiment.model_name }}
+                    </td>
+
+                    <td>
+                        {{ experiment.dataset_name }}
+                    </td>
+
+                    <td>
+
+                        <span
+                            class="status status-{{ experiment.status }}"
+                        >
+                            {{ experiment.status }}
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        {% if experiment.eval_accuracy is not none %}
+
+                            {{
+                                "%.2f"|format(
+                                    experiment.eval_accuracy * 100
+                                )
+                            }}%
+
+                        {% else %}
+
+                            —
+
+                        {% endif %}
+
+                    </td>
+
+                    <td>
+
+                        {% if experiment.final_train_loss is not none %}
+
+                            {{
+                                "%.4f"|format(
+                                    experiment.final_train_loss
+                                )
+                            }}
+
+                        {% else %}
+
+                            —
+
+                        {% endif %}
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    {% else %}
+
+        <p>
+            No experiments found.
+        </p>
+
+    {% endif %}
+
+</section>
+
+
+{% endblock %}

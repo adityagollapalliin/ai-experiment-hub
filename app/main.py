@@ -1,7 +1,8 @@
 from fastapi import FastAPI
-
+from fastapi.staticfiles import StaticFiles
 from app.database import Base, engine
 
+from app.routers import dashboard
 from app.routers import projects
 from app.routers import experiments
 from app.routers import metrics
@@ -36,3 +37,12 @@ def health():
     return {
         "status": "healthy",
     }
+
+app.mount(
+    "/static",
+    StaticFiles(directory="app/static"),
+    name="static",
+)
+app.include_router(
+    dashboard.router
+)

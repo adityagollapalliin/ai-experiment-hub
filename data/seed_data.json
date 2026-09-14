@@ -1,0 +1,2089 @@
+{
+  "about": {
+    "dataset_type": "synthetic seed data",
+    "purpose": "Development/testing of an AI experiment tracking full-stack application",
+    "warning": "All metric values are synthetic and are not real model benchmark results."
+  },
+  "projects": [
+    {
+      "id": 1,
+      "name": "Medical Reasoning Models",
+      "description": "Synthetic seed project for comparing small language models on medical reasoning tasks.",
+      "created_at": "2026-09-01T10:00:00"
+    },
+    {
+      "id": 2,
+      "name": "General Reasoning Benchmarks",
+      "description": "Synthetic seed project for comparing model behavior on general reasoning benchmarks.",
+      "created_at": "2026-09-03T10:00:00"
+    }
+  ],
+  "experiments": [
+    {
+      "id": 1,
+      "project_id": 1,
+      "name": "Phi-4 Mini - MedMCQA - Run 01",
+      "model_name": "Phi-4 Mini",
+      "model_repo": "microsoft/Phi-4-mini-instruct",
+      "dataset_name": "MedMCQA",
+      "dataset_repo": "openlifescienceai/medmcqa",
+      "training_type": "Full/Baseline",
+      "learning_rate": 1e-05,
+      "batch_size": 2,
+      "epochs": 2,
+      "optimizer": "AdamW",
+      "lora_rank": 0,
+      "gradient_accumulation_steps": 1,
+      "max_sequence_length": 1024,
+      "seed": 42,
+      "status": "completed",
+      "final_train_loss": 1.49,
+      "eval_accuracy": 0.56,
+      "gpu": "NVIDIA A100 80GB",
+      "training_duration_minutes": 97,
+      "created_at": "2026-09-04T09:00:00",
+      "finished_at": "2026-09-04T10:30:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 2,
+      "project_id": 1,
+      "name": "Qwen2.5 3B - Medical O1 Reasoning - Run 02",
+      "model_name": "Qwen2.5 3B",
+      "model_repo": "Qwen/Qwen2.5-3B-Instruct",
+      "dataset_name": "Medical O1 Reasoning",
+      "dataset_repo": "FreedomIntelligence/medical-o1-reasoning-SFT",
+      "training_type": "LoRA SFT",
+      "learning_rate": 2e-05,
+      "batch_size": 2,
+      "epochs": 2,
+      "optimizer": "AdamW",
+      "lora_rank": 8,
+      "gradient_accumulation_steps": 2,
+      "max_sequence_length": 2048,
+      "seed": 43,
+      "status": "completed",
+      "final_train_loss": 1.31,
+      "eval_accuracy": 0.645,
+      "gpu": "NVIDIA L40S",
+      "training_duration_minutes": 110,
+      "created_at": "2026-09-04T15:00:00",
+      "finished_at": "2026-09-04T17:12:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 3,
+      "project_id": 1,
+      "name": "Llama 3.2 3B - MedMCQA - Run 03",
+      "model_name": "Llama 3.2 3B",
+      "model_repo": "meta-llama/Llama-3.2-3B-Instruct",
+      "dataset_name": "MedMCQA",
+      "dataset_repo": "openlifescienceai/medmcqa",
+      "training_type": "LoRA SFT",
+      "learning_rate": 3e-05,
+      "batch_size": 4,
+      "epochs": 2,
+      "optimizer": "AdamW",
+      "lora_rank": 16,
+      "gradient_accumulation_steps": 4,
+      "max_sequence_length": 4096,
+      "seed": 44,
+      "status": "completed",
+      "final_train_loss": 1.13,
+      "eval_accuracy": 0.65,
+      "gpu": "NVIDIA RTX 4090",
+      "training_duration_minutes": 123,
+      "created_at": "2026-09-04T21:00:00",
+      "finished_at": "2026-09-04T23:54:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 4,
+      "project_id": 1,
+      "name": "Phi-4 Mini - Medical O1 Reasoning - Run 04",
+      "model_name": "Phi-4 Mini",
+      "model_repo": "microsoft/Phi-4-mini-instruct",
+      "dataset_name": "Medical O1 Reasoning",
+      "dataset_repo": "FreedomIntelligence/medical-o1-reasoning-SFT",
+      "training_type": "LoRA SFT",
+      "learning_rate": 5e-05,
+      "batch_size": 4,
+      "epochs": 3,
+      "optimizer": "Lion",
+      "lora_rank": 32,
+      "gradient_accumulation_steps": 1,
+      "max_sequence_length": 1024,
+      "seed": 45,
+      "status": "completed",
+      "final_train_loss": 0.94,
+      "eval_accuracy": 0.685,
+      "gpu": "NVIDIA A100 80GB",
+      "training_duration_minutes": 136,
+      "created_at": "2026-09-05T03:00:00",
+      "finished_at": "2026-09-05T06:36:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 5,
+      "project_id": 1,
+      "name": "Qwen2.5 3B - MedMCQA - Run 05",
+      "model_name": "Qwen2.5 3B",
+      "model_repo": "Qwen/Qwen2.5-3B-Instruct",
+      "dataset_name": "MedMCQA",
+      "dataset_repo": "openlifescienceai/medmcqa",
+      "training_type": "Full/Baseline",
+      "learning_rate": 1e-05,
+      "batch_size": 8,
+      "epochs": 3,
+      "optimizer": "AdamW",
+      "lora_rank": 0,
+      "gradient_accumulation_steps": 2,
+      "max_sequence_length": 2048,
+      "seed": 46,
+      "status": "completed",
+      "final_train_loss": 1.09,
+      "eval_accuracy": 0.73,
+      "gpu": "NVIDIA L40S",
+      "training_duration_minutes": 149,
+      "created_at": "2026-09-05T09:00:00",
+      "finished_at": "2026-09-05T13:18:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 6,
+      "project_id": 1,
+      "name": "Llama 3.2 3B - Medical O1 Reasoning - Run 06",
+      "model_name": "Llama 3.2 3B",
+      "model_repo": "meta-llama/Llama-3.2-3B-Instruct",
+      "dataset_name": "Medical O1 Reasoning",
+      "dataset_repo": "FreedomIntelligence/medical-o1-reasoning-SFT",
+      "training_type": "LoRA SFT",
+      "learning_rate": 2e-05,
+      "batch_size": 8,
+      "epochs": 3,
+      "optimizer": "AdamW",
+      "lora_rank": 8,
+      "gradient_accumulation_steps": 4,
+      "max_sequence_length": 4096,
+      "seed": 47,
+      "status": "completed",
+      "final_train_loss": 0.88,
+      "eval_accuracy": 0.755,
+      "gpu": "NVIDIA RTX 4090",
+      "training_duration_minutes": 162,
+      "created_at": "2026-09-05T15:00:00",
+      "finished_at": "2026-09-05T16:30:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 7,
+      "project_id": 1,
+      "name": "Phi-4 Mini - MedMCQA - Run 07",
+      "model_name": "Phi-4 Mini",
+      "model_repo": "microsoft/Phi-4-mini-instruct",
+      "dataset_name": "MedMCQA",
+      "dataset_repo": "openlifescienceai/medmcqa",
+      "training_type": "LoRA SFT",
+      "learning_rate": 3e-05,
+      "batch_size": 2,
+      "epochs": 4,
+      "optimizer": "AdamW",
+      "lora_rank": 16,
+      "gradient_accumulation_steps": 1,
+      "max_sequence_length": 1024,
+      "seed": 48,
+      "status": "completed",
+      "final_train_loss": 0.69,
+      "eval_accuracy": 0.58,
+      "gpu": "NVIDIA A100 80GB",
+      "training_duration_minutes": 175,
+      "created_at": "2026-09-05T21:00:00",
+      "finished_at": "2026-09-05T23:12:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 8,
+      "project_id": 1,
+      "name": "Qwen2.5 3B - Medical O1 Reasoning - Run 08",
+      "model_name": "Qwen2.5 3B",
+      "model_repo": "Qwen/Qwen2.5-3B-Instruct",
+      "dataset_name": "Medical O1 Reasoning",
+      "dataset_repo": "FreedomIntelligence/medical-o1-reasoning-SFT",
+      "training_type": "LoRA SFT",
+      "learning_rate": 5e-05,
+      "batch_size": 2,
+      "epochs": 4,
+      "optimizer": "Lion",
+      "lora_rank": 32,
+      "gradient_accumulation_steps": 2,
+      "max_sequence_length": 2048,
+      "seed": 49,
+      "status": "completed",
+      "final_train_loss": 0.45,
+      "eval_accuracy": 0.645,
+      "gpu": "NVIDIA L40S",
+      "training_duration_minutes": 188,
+      "created_at": "2026-09-06T03:00:00",
+      "finished_at": "2026-09-06T05:54:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 9,
+      "project_id": 1,
+      "name": "Llama 3.2 3B - MedMCQA - Run 09",
+      "model_name": "Llama 3.2 3B",
+      "model_repo": "meta-llama/Llama-3.2-3B-Instruct",
+      "dataset_name": "MedMCQA",
+      "dataset_repo": "openlifescienceai/medmcqa",
+      "training_type": "Full/Baseline",
+      "learning_rate": 1e-05,
+      "batch_size": 4,
+      "epochs": 4,
+      "optimizer": "AdamW",
+      "lora_rank": 0,
+      "gradient_accumulation_steps": 4,
+      "max_sequence_length": 4096,
+      "seed": 50,
+      "status": "completed",
+      "final_train_loss": 0.69,
+      "eval_accuracy": 0.63,
+      "gpu": "NVIDIA RTX 4090",
+      "training_duration_minutes": 201,
+      "created_at": "2026-09-06T09:00:00",
+      "finished_at": "2026-09-06T12:36:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 10,
+      "project_id": 1,
+      "name": "Phi-4 Mini - Medical O1 Reasoning - Run 10",
+      "model_name": "Phi-4 Mini",
+      "model_repo": "microsoft/Phi-4-mini-instruct",
+      "dataset_name": "Medical O1 Reasoning",
+      "dataset_repo": "FreedomIntelligence/medical-o1-reasoning-SFT",
+      "training_type": "LoRA SFT",
+      "learning_rate": 2e-05,
+      "batch_size": 4,
+      "epochs": 2,
+      "optimizer": "AdamW",
+      "lora_rank": 8,
+      "gradient_accumulation_steps": 1,
+      "max_sequence_length": 1024,
+      "seed": 51,
+      "status": "completed",
+      "final_train_loss": 1.43,
+      "eval_accuracy": 0.685,
+      "gpu": "NVIDIA A100 80GB",
+      "training_duration_minutes": 214,
+      "created_at": "2026-09-06T15:00:00",
+      "finished_at": "2026-09-06T19:18:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 11,
+      "project_id": 1,
+      "name": "Qwen2.5 3B - MedMCQA - Run 11",
+      "model_name": "Qwen2.5 3B",
+      "model_repo": "Qwen/Qwen2.5-3B-Instruct",
+      "dataset_name": "MedMCQA",
+      "dataset_repo": "openlifescienceai/medmcqa",
+      "training_type": "LoRA SFT",
+      "learning_rate": 3e-05,
+      "batch_size": 8,
+      "epochs": 2,
+      "optimizer": "AdamW",
+      "lora_rank": 16,
+      "gradient_accumulation_steps": 2,
+      "max_sequence_length": 2048,
+      "seed": 52,
+      "status": "running",
+      "final_train_loss": null,
+      "eval_accuracy": null,
+      "gpu": "NVIDIA L40S",
+      "training_duration_minutes": null,
+      "created_at": "2026-09-06T21:00:00",
+      "finished_at": null,
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 12,
+      "project_id": 1,
+      "name": "Llama 3.2 3B - Medical O1 Reasoning - Run 12",
+      "model_name": "Llama 3.2 3B",
+      "model_repo": "meta-llama/Llama-3.2-3B-Instruct",
+      "dataset_name": "Medical O1 Reasoning",
+      "dataset_repo": "FreedomIntelligence/medical-o1-reasoning-SFT",
+      "training_type": "LoRA SFT",
+      "learning_rate": 5e-05,
+      "batch_size": 8,
+      "epochs": 2,
+      "optimizer": "Lion",
+      "lora_rank": 32,
+      "gradient_accumulation_steps": 4,
+      "max_sequence_length": 4096,
+      "seed": 53,
+      "status": "failed",
+      "final_train_loss": null,
+      "eval_accuracy": null,
+      "gpu": "NVIDIA RTX 4090",
+      "training_duration_minutes": null,
+      "created_at": "2026-09-07T03:00:00",
+      "finished_at": null,
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 13,
+      "project_id": 2,
+      "name": "Phi-4 Mini - Medical O1 Reasoning - Run 01",
+      "model_name": "Phi-4 Mini",
+      "model_repo": "microsoft/Phi-4-mini-instruct",
+      "dataset_name": "Medical O1 Reasoning",
+      "dataset_repo": "FreedomIntelligence/medical-o1-reasoning-SFT",
+      "training_type": "Full/Baseline",
+      "learning_rate": 1e-05,
+      "batch_size": 2,
+      "epochs": 2,
+      "optimizer": "AdamW",
+      "lora_rank": 0,
+      "gradient_accumulation_steps": 1,
+      "max_sequence_length": 1024,
+      "seed": 42,
+      "status": "completed",
+      "final_train_loss": 1.54,
+      "eval_accuracy": 0.56,
+      "gpu": "NVIDIA A100 80GB",
+      "training_duration_minutes": 104,
+      "created_at": "2026-09-07T09:00:00",
+      "finished_at": "2026-09-07T10:30:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 14,
+      "project_id": 2,
+      "name": "Qwen2.5 3B - MedMCQA - Run 02",
+      "model_name": "Qwen2.5 3B",
+      "model_repo": "Qwen/Qwen2.5-3B-Instruct",
+      "dataset_name": "MedMCQA",
+      "dataset_repo": "openlifescienceai/medmcqa",
+      "training_type": "LoRA SFT",
+      "learning_rate": 2e-05,
+      "batch_size": 2,
+      "epochs": 2,
+      "optimizer": "AdamW",
+      "lora_rank": 8,
+      "gradient_accumulation_steps": 2,
+      "max_sequence_length": 2048,
+      "seed": 43,
+      "status": "completed",
+      "final_train_loss": 1.36,
+      "eval_accuracy": 0.645,
+      "gpu": "NVIDIA L40S",
+      "training_duration_minutes": 117,
+      "created_at": "2026-09-07T15:00:00",
+      "finished_at": "2026-09-07T17:12:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 15,
+      "project_id": 2,
+      "name": "Llama 3.2 3B - Medical O1 Reasoning - Run 03",
+      "model_name": "Llama 3.2 3B",
+      "model_repo": "meta-llama/Llama-3.2-3B-Instruct",
+      "dataset_name": "Medical O1 Reasoning",
+      "dataset_repo": "FreedomIntelligence/medical-o1-reasoning-SFT",
+      "training_type": "LoRA SFT",
+      "learning_rate": 3e-05,
+      "batch_size": 4,
+      "epochs": 2,
+      "optimizer": "AdamW",
+      "lora_rank": 16,
+      "gradient_accumulation_steps": 4,
+      "max_sequence_length": 4096,
+      "seed": 44,
+      "status": "completed",
+      "final_train_loss": 1.18,
+      "eval_accuracy": 0.65,
+      "gpu": "NVIDIA RTX 4090",
+      "training_duration_minutes": 130,
+      "created_at": "2026-09-07T21:00:00",
+      "finished_at": "2026-09-07T23:54:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 16,
+      "project_id": 2,
+      "name": "Phi-4 Mini - MedMCQA - Run 04",
+      "model_name": "Phi-4 Mini",
+      "model_repo": "microsoft/Phi-4-mini-instruct",
+      "dataset_name": "MedMCQA",
+      "dataset_repo": "openlifescienceai/medmcqa",
+      "training_type": "LoRA SFT",
+      "learning_rate": 5e-05,
+      "batch_size": 4,
+      "epochs": 3,
+      "optimizer": "Lion",
+      "lora_rank": 32,
+      "gradient_accumulation_steps": 1,
+      "max_sequence_length": 1024,
+      "seed": 45,
+      "status": "completed",
+      "final_train_loss": 0.99,
+      "eval_accuracy": 0.685,
+      "gpu": "NVIDIA A100 80GB",
+      "training_duration_minutes": 143,
+      "created_at": "2026-09-08T03:00:00",
+      "finished_at": "2026-09-08T06:36:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 17,
+      "project_id": 2,
+      "name": "Qwen2.5 3B - Medical O1 Reasoning - Run 05",
+      "model_name": "Qwen2.5 3B",
+      "model_repo": "Qwen/Qwen2.5-3B-Instruct",
+      "dataset_name": "Medical O1 Reasoning",
+      "dataset_repo": "FreedomIntelligence/medical-o1-reasoning-SFT",
+      "training_type": "Full/Baseline",
+      "learning_rate": 1e-05,
+      "batch_size": 8,
+      "epochs": 3,
+      "optimizer": "AdamW",
+      "lora_rank": 0,
+      "gradient_accumulation_steps": 2,
+      "max_sequence_length": 2048,
+      "seed": 46,
+      "status": "completed",
+      "final_train_loss": 1.14,
+      "eval_accuracy": 0.73,
+      "gpu": "NVIDIA L40S",
+      "training_duration_minutes": 156,
+      "created_at": "2026-09-08T09:00:00",
+      "finished_at": "2026-09-08T13:18:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 18,
+      "project_id": 2,
+      "name": "Llama 3.2 3B - MedMCQA - Run 06",
+      "model_name": "Llama 3.2 3B",
+      "model_repo": "meta-llama/Llama-3.2-3B-Instruct",
+      "dataset_name": "MedMCQA",
+      "dataset_repo": "openlifescienceai/medmcqa",
+      "training_type": "LoRA SFT",
+      "learning_rate": 2e-05,
+      "batch_size": 8,
+      "epochs": 3,
+      "optimizer": "AdamW",
+      "lora_rank": 8,
+      "gradient_accumulation_steps": 4,
+      "max_sequence_length": 4096,
+      "seed": 47,
+      "status": "completed",
+      "final_train_loss": 0.93,
+      "eval_accuracy": 0.755,
+      "gpu": "NVIDIA RTX 4090",
+      "training_duration_minutes": 169,
+      "created_at": "2026-09-08T15:00:00",
+      "finished_at": "2026-09-08T16:30:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 19,
+      "project_id": 2,
+      "name": "Phi-4 Mini - Medical O1 Reasoning - Run 07",
+      "model_name": "Phi-4 Mini",
+      "model_repo": "microsoft/Phi-4-mini-instruct",
+      "dataset_name": "Medical O1 Reasoning",
+      "dataset_repo": "FreedomIntelligence/medical-o1-reasoning-SFT",
+      "training_type": "LoRA SFT",
+      "learning_rate": 3e-05,
+      "batch_size": 2,
+      "epochs": 4,
+      "optimizer": "AdamW",
+      "lora_rank": 16,
+      "gradient_accumulation_steps": 1,
+      "max_sequence_length": 1024,
+      "seed": 48,
+      "status": "completed",
+      "final_train_loss": 0.74,
+      "eval_accuracy": 0.58,
+      "gpu": "NVIDIA A100 80GB",
+      "training_duration_minutes": 182,
+      "created_at": "2026-09-08T21:00:00",
+      "finished_at": "2026-09-08T23:12:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 20,
+      "project_id": 2,
+      "name": "Qwen2.5 3B - MedMCQA - Run 08",
+      "model_name": "Qwen2.5 3B",
+      "model_repo": "Qwen/Qwen2.5-3B-Instruct",
+      "dataset_name": "MedMCQA",
+      "dataset_repo": "openlifescienceai/medmcqa",
+      "training_type": "LoRA SFT",
+      "learning_rate": 5e-05,
+      "batch_size": 2,
+      "epochs": 4,
+      "optimizer": "Lion",
+      "lora_rank": 32,
+      "gradient_accumulation_steps": 2,
+      "max_sequence_length": 2048,
+      "seed": 49,
+      "status": "completed",
+      "final_train_loss": 0.5,
+      "eval_accuracy": 0.645,
+      "gpu": "NVIDIA L40S",
+      "training_duration_minutes": 195,
+      "created_at": "2026-09-09T03:00:00",
+      "finished_at": "2026-09-09T05:54:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 21,
+      "project_id": 2,
+      "name": "Llama 3.2 3B - Medical O1 Reasoning - Run 09",
+      "model_name": "Llama 3.2 3B",
+      "model_repo": "meta-llama/Llama-3.2-3B-Instruct",
+      "dataset_name": "Medical O1 Reasoning",
+      "dataset_repo": "FreedomIntelligence/medical-o1-reasoning-SFT",
+      "training_type": "Full/Baseline",
+      "learning_rate": 1e-05,
+      "batch_size": 4,
+      "epochs": 4,
+      "optimizer": "AdamW",
+      "lora_rank": 0,
+      "gradient_accumulation_steps": 4,
+      "max_sequence_length": 4096,
+      "seed": 50,
+      "status": "completed",
+      "final_train_loss": 0.74,
+      "eval_accuracy": 0.63,
+      "gpu": "NVIDIA RTX 4090",
+      "training_duration_minutes": 208,
+      "created_at": "2026-09-09T09:00:00",
+      "finished_at": "2026-09-09T12:36:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 22,
+      "project_id": 2,
+      "name": "Phi-4 Mini - MedMCQA - Run 10",
+      "model_name": "Phi-4 Mini",
+      "model_repo": "microsoft/Phi-4-mini-instruct",
+      "dataset_name": "MedMCQA",
+      "dataset_repo": "openlifescienceai/medmcqa",
+      "training_type": "LoRA SFT",
+      "learning_rate": 2e-05,
+      "batch_size": 4,
+      "epochs": 2,
+      "optimizer": "AdamW",
+      "lora_rank": 8,
+      "gradient_accumulation_steps": 1,
+      "max_sequence_length": 1024,
+      "seed": 51,
+      "status": "completed",
+      "final_train_loss": 1.48,
+      "eval_accuracy": 0.685,
+      "gpu": "NVIDIA A100 80GB",
+      "training_duration_minutes": 221,
+      "created_at": "2026-09-09T15:00:00",
+      "finished_at": "2026-09-09T19:18:00",
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 23,
+      "project_id": 2,
+      "name": "Qwen2.5 3B - Medical O1 Reasoning - Run 11",
+      "model_name": "Qwen2.5 3B",
+      "model_repo": "Qwen/Qwen2.5-3B-Instruct",
+      "dataset_name": "Medical O1 Reasoning",
+      "dataset_repo": "FreedomIntelligence/medical-o1-reasoning-SFT",
+      "training_type": "LoRA SFT",
+      "learning_rate": 3e-05,
+      "batch_size": 8,
+      "epochs": 2,
+      "optimizer": "AdamW",
+      "lora_rank": 16,
+      "gradient_accumulation_steps": 2,
+      "max_sequence_length": 2048,
+      "seed": 52,
+      "status": "running",
+      "final_train_loss": null,
+      "eval_accuracy": null,
+      "gpu": "NVIDIA L40S",
+      "training_duration_minutes": null,
+      "created_at": "2026-09-09T21:00:00",
+      "finished_at": null,
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    },
+    {
+      "id": 24,
+      "project_id": 2,
+      "name": "Llama 3.2 3B - MedMCQA - Run 12",
+      "model_name": "Llama 3.2 3B",
+      "model_repo": "meta-llama/Llama-3.2-3B-Instruct",
+      "dataset_name": "MedMCQA",
+      "dataset_repo": "openlifescienceai/medmcqa",
+      "training_type": "LoRA SFT",
+      "learning_rate": 5e-05,
+      "batch_size": 8,
+      "epochs": 2,
+      "optimizer": "Lion",
+      "lora_rank": 32,
+      "gradient_accumulation_steps": 4,
+      "max_sequence_length": 4096,
+      "seed": 53,
+      "status": "failed",
+      "final_train_loss": null,
+      "eval_accuracy": null,
+      "gpu": "NVIDIA RTX 4090",
+      "training_duration_minutes": null,
+      "created_at": "2026-09-10T03:00:00",
+      "finished_at": null,
+      "notes": "Synthetic seed record. Values are generated for application development and must not be treated as real benchmark results."
+    }
+  ],
+  "metrics": [
+    {
+      "id": 1,
+      "experiment_id": 1,
+      "name": "train_loss",
+      "value": 1.75,
+      "step": 1,
+      "timestamp": "2026-09-04T09:25:00"
+    },
+    {
+      "id": 2,
+      "experiment_id": 1,
+      "name": "val_loss",
+      "value": 1.85,
+      "step": 1,
+      "timestamp": "2026-09-04T09:25:00"
+    },
+    {
+      "id": 3,
+      "experiment_id": 1,
+      "name": "accuracy",
+      "value": 0.59,
+      "step": 1,
+      "timestamp": "2026-09-04T09:25:00"
+    },
+    {
+      "id": 4,
+      "experiment_id": 1,
+      "name": "train_loss",
+      "value": 1.47,
+      "step": 2,
+      "timestamp": "2026-09-04T09:50:00"
+    },
+    {
+      "id": 5,
+      "experiment_id": 1,
+      "name": "val_loss",
+      "value": 1.57,
+      "step": 2,
+      "timestamp": "2026-09-04T09:50:00"
+    },
+    {
+      "id": 6,
+      "experiment_id": 1,
+      "name": "accuracy",
+      "value": 0.68,
+      "step": 2,
+      "timestamp": "2026-09-04T09:50:00"
+    },
+    {
+      "id": 7,
+      "experiment_id": 2,
+      "name": "train_loss",
+      "value": 1.61,
+      "step": 1,
+      "timestamp": "2026-09-04T15:25:00"
+    },
+    {
+      "id": 8,
+      "experiment_id": 2,
+      "name": "val_loss",
+      "value": 1.735,
+      "step": 1,
+      "timestamp": "2026-09-04T15:25:00"
+    },
+    {
+      "id": 9,
+      "experiment_id": 2,
+      "name": "accuracy",
+      "value": 0.648,
+      "step": 1,
+      "timestamp": "2026-09-04T15:25:00"
+    },
+    {
+      "id": 10,
+      "experiment_id": 2,
+      "name": "train_loss",
+      "value": 1.3,
+      "step": 2,
+      "timestamp": "2026-09-04T15:50:00"
+    },
+    {
+      "id": 11,
+      "experiment_id": 2,
+      "name": "val_loss",
+      "value": 1.425,
+      "step": 2,
+      "timestamp": "2026-09-04T15:50:00"
+    },
+    {
+      "id": 12,
+      "experiment_id": 2,
+      "name": "accuracy",
+      "value": 0.738,
+      "step": 2,
+      "timestamp": "2026-09-04T15:50:00"
+    },
+    {
+      "id": 13,
+      "experiment_id": 3,
+      "name": "train_loss",
+      "value": 1.47,
+      "step": 1,
+      "timestamp": "2026-09-04T21:25:00"
+    },
+    {
+      "id": 14,
+      "experiment_id": 3,
+      "name": "val_loss",
+      "value": 1.62,
+      "step": 1,
+      "timestamp": "2026-09-04T21:25:00"
+    },
+    {
+      "id": 15,
+      "experiment_id": 3,
+      "name": "accuracy",
+      "value": 0.641,
+      "step": 1,
+      "timestamp": "2026-09-04T21:25:00"
+    },
+    {
+      "id": 16,
+      "experiment_id": 3,
+      "name": "train_loss",
+      "value": 1.13,
+      "step": 2,
+      "timestamp": "2026-09-04T21:50:00"
+    },
+    {
+      "id": 17,
+      "experiment_id": 3,
+      "name": "val_loss",
+      "value": 1.28,
+      "step": 2,
+      "timestamp": "2026-09-04T21:50:00"
+    },
+    {
+      "id": 18,
+      "experiment_id": 3,
+      "name": "accuracy",
+      "value": 0.731,
+      "step": 2,
+      "timestamp": "2026-09-04T21:50:00"
+    },
+    {
+      "id": 19,
+      "experiment_id": 4,
+      "name": "train_loss",
+      "value": 1.69,
+      "step": 1,
+      "timestamp": "2026-09-05T03:25:00"
+    },
+    {
+      "id": 20,
+      "experiment_id": 4,
+      "name": "val_loss",
+      "value": 1.79,
+      "step": 1,
+      "timestamp": "2026-09-05T03:25:00"
+    },
+    {
+      "id": 21,
+      "experiment_id": 4,
+      "name": "accuracy",
+      "value": 0.629,
+      "step": 1,
+      "timestamp": "2026-09-05T03:25:00"
+    },
+    {
+      "id": 22,
+      "experiment_id": 4,
+      "name": "train_loss",
+      "value": 1.32,
+      "step": 2,
+      "timestamp": "2026-09-05T03:50:00"
+    },
+    {
+      "id": 23,
+      "experiment_id": 4,
+      "name": "val_loss",
+      "value": 1.42,
+      "step": 2,
+      "timestamp": "2026-09-05T03:50:00"
+    },
+    {
+      "id": 24,
+      "experiment_id": 4,
+      "name": "accuracy",
+      "value": 0.689,
+      "step": 2,
+      "timestamp": "2026-09-05T03:50:00"
+    },
+    {
+      "id": 25,
+      "experiment_id": 4,
+      "name": "train_loss",
+      "value": 0.95,
+      "step": 3,
+      "timestamp": "2026-09-05T04:15:00"
+    },
+    {
+      "id": 26,
+      "experiment_id": 4,
+      "name": "val_loss",
+      "value": 1.05,
+      "step": 3,
+      "timestamp": "2026-09-05T04:15:00"
+    },
+    {
+      "id": 27,
+      "experiment_id": 4,
+      "name": "accuracy",
+      "value": 0.749,
+      "step": 3,
+      "timestamp": "2026-09-05T04:15:00"
+    },
+    {
+      "id": 28,
+      "experiment_id": 5,
+      "name": "train_loss",
+      "value": 1.67,
+      "step": 1,
+      "timestamp": "2026-09-05T09:25:00"
+    },
+    {
+      "id": 29,
+      "experiment_id": 5,
+      "name": "val_loss",
+      "value": 1.795,
+      "step": 1,
+      "timestamp": "2026-09-05T09:25:00"
+    },
+    {
+      "id": 30,
+      "experiment_id": 5,
+      "name": "accuracy",
+      "value": 0.657,
+      "step": 1,
+      "timestamp": "2026-09-05T09:25:00"
+    },
+    {
+      "id": 31,
+      "experiment_id": 5,
+      "name": "train_loss",
+      "value": 1.39,
+      "step": 2,
+      "timestamp": "2026-09-05T09:50:00"
+    },
+    {
+      "id": 32,
+      "experiment_id": 5,
+      "name": "val_loss",
+      "value": 1.515,
+      "step": 2,
+      "timestamp": "2026-09-05T09:50:00"
+    },
+    {
+      "id": 33,
+      "experiment_id": 5,
+      "name": "accuracy",
+      "value": 0.717,
+      "step": 2,
+      "timestamp": "2026-09-05T09:50:00"
+    },
+    {
+      "id": 34,
+      "experiment_id": 5,
+      "name": "train_loss",
+      "value": 1.11,
+      "step": 3,
+      "timestamp": "2026-09-05T10:15:00"
+    },
+    {
+      "id": 35,
+      "experiment_id": 5,
+      "name": "val_loss",
+      "value": 1.235,
+      "step": 3,
+      "timestamp": "2026-09-05T10:15:00"
+    },
+    {
+      "id": 36,
+      "experiment_id": 5,
+      "name": "accuracy",
+      "value": 0.777,
+      "step": 3,
+      "timestamp": "2026-09-05T10:15:00"
+    },
+    {
+      "id": 37,
+      "experiment_id": 6,
+      "name": "train_loss",
+      "value": 1.48,
+      "step": 1,
+      "timestamp": "2026-09-05T15:25:00"
+    },
+    {
+      "id": 38,
+      "experiment_id": 6,
+      "name": "val_loss",
+      "value": 1.63,
+      "step": 1,
+      "timestamp": "2026-09-05T15:25:00"
+    },
+    {
+      "id": 39,
+      "experiment_id": 6,
+      "name": "accuracy",
+      "value": 0.665,
+      "step": 1,
+      "timestamp": "2026-09-05T15:25:00"
+    },
+    {
+      "id": 40,
+      "experiment_id": 6,
+      "name": "train_loss",
+      "value": 1.17,
+      "step": 2,
+      "timestamp": "2026-09-05T15:50:00"
+    },
+    {
+      "id": 41,
+      "experiment_id": 6,
+      "name": "val_loss",
+      "value": 1.32,
+      "step": 2,
+      "timestamp": "2026-09-05T15:50:00"
+    },
+    {
+      "id": 42,
+      "experiment_id": 6,
+      "name": "accuracy",
+      "value": 0.725,
+      "step": 2,
+      "timestamp": "2026-09-05T15:50:00"
+    },
+    {
+      "id": 43,
+      "experiment_id": 6,
+      "name": "train_loss",
+      "value": 0.86,
+      "step": 3,
+      "timestamp": "2026-09-05T16:15:00"
+    },
+    {
+      "id": 44,
+      "experiment_id": 6,
+      "name": "val_loss",
+      "value": 1.01,
+      "step": 3,
+      "timestamp": "2026-09-05T16:15:00"
+    },
+    {
+      "id": 45,
+      "experiment_id": 6,
+      "name": "accuracy",
+      "value": 0.785,
+      "step": 3,
+      "timestamp": "2026-09-05T16:15:00"
+    },
+    {
+      "id": 46,
+      "experiment_id": 7,
+      "name": "train_loss",
+      "value": 1.7,
+      "step": 1,
+      "timestamp": "2026-09-05T21:25:00"
+    },
+    {
+      "id": 47,
+      "experiment_id": 7,
+      "name": "val_loss",
+      "value": 1.8,
+      "step": 1,
+      "timestamp": "2026-09-05T21:25:00"
+    },
+    {
+      "id": 48,
+      "experiment_id": 7,
+      "name": "accuracy",
+      "value": 0.56,
+      "step": 1,
+      "timestamp": "2026-09-05T21:25:00"
+    },
+    {
+      "id": 49,
+      "experiment_id": 7,
+      "name": "train_loss",
+      "value": 1.36,
+      "step": 2,
+      "timestamp": "2026-09-05T21:50:00"
+    },
+    {
+      "id": 50,
+      "experiment_id": 7,
+      "name": "val_loss",
+      "value": 1.46,
+      "step": 2,
+      "timestamp": "2026-09-05T21:50:00"
+    },
+    {
+      "id": 51,
+      "experiment_id": 7,
+      "name": "accuracy",
+      "value": 0.605,
+      "step": 2,
+      "timestamp": "2026-09-05T21:50:00"
+    },
+    {
+      "id": 52,
+      "experiment_id": 7,
+      "name": "train_loss",
+      "value": 1.02,
+      "step": 3,
+      "timestamp": "2026-09-05T22:15:00"
+    },
+    {
+      "id": 53,
+      "experiment_id": 7,
+      "name": "val_loss",
+      "value": 1.12,
+      "step": 3,
+      "timestamp": "2026-09-05T22:15:00"
+    },
+    {
+      "id": 54,
+      "experiment_id": 7,
+      "name": "accuracy",
+      "value": 0.65,
+      "step": 3,
+      "timestamp": "2026-09-05T22:15:00"
+    },
+    {
+      "id": 55,
+      "experiment_id": 7,
+      "name": "train_loss",
+      "value": 0.68,
+      "step": 4,
+      "timestamp": "2026-09-05T22:40:00"
+    },
+    {
+      "id": 56,
+      "experiment_id": 7,
+      "name": "val_loss",
+      "value": 0.78,
+      "step": 4,
+      "timestamp": "2026-09-05T22:40:00"
+    },
+    {
+      "id": 57,
+      "experiment_id": 7,
+      "name": "accuracy",
+      "value": 0.695,
+      "step": 4,
+      "timestamp": "2026-09-05T22:40:00"
+    },
+    {
+      "id": 58,
+      "experiment_id": 8,
+      "name": "train_loss",
+      "value": 1.56,
+      "step": 1,
+      "timestamp": "2026-09-06T03:25:00"
+    },
+    {
+      "id": 59,
+      "experiment_id": 8,
+      "name": "val_loss",
+      "value": 1.685,
+      "step": 1,
+      "timestamp": "2026-09-06T03:25:00"
+    },
+    {
+      "id": 60,
+      "experiment_id": 8,
+      "name": "accuracy",
+      "value": 0.603,
+      "step": 1,
+      "timestamp": "2026-09-06T03:25:00"
+    },
+    {
+      "id": 61,
+      "experiment_id": 8,
+      "name": "train_loss",
+      "value": 1.19,
+      "step": 2,
+      "timestamp": "2026-09-06T03:50:00"
+    },
+    {
+      "id": 62,
+      "experiment_id": 8,
+      "name": "val_loss",
+      "value": 1.315,
+      "step": 2,
+      "timestamp": "2026-09-06T03:50:00"
+    },
+    {
+      "id": 63,
+      "experiment_id": 8,
+      "name": "accuracy",
+      "value": 0.648,
+      "step": 2,
+      "timestamp": "2026-09-06T03:50:00"
+    },
+    {
+      "id": 64,
+      "experiment_id": 8,
+      "name": "train_loss",
+      "value": 0.82,
+      "step": 3,
+      "timestamp": "2026-09-06T04:15:00"
+    },
+    {
+      "id": 65,
+      "experiment_id": 8,
+      "name": "val_loss",
+      "value": 0.945,
+      "step": 3,
+      "timestamp": "2026-09-06T04:15:00"
+    },
+    {
+      "id": 66,
+      "experiment_id": 8,
+      "name": "accuracy",
+      "value": 0.693,
+      "step": 3,
+      "timestamp": "2026-09-06T04:15:00"
+    },
+    {
+      "id": 67,
+      "experiment_id": 8,
+      "name": "train_loss",
+      "value": 0.45,
+      "step": 4,
+      "timestamp": "2026-09-06T04:40:00"
+    },
+    {
+      "id": 68,
+      "experiment_id": 8,
+      "name": "val_loss",
+      "value": 0.575,
+      "step": 4,
+      "timestamp": "2026-09-06T04:40:00"
+    },
+    {
+      "id": 69,
+      "experiment_id": 8,
+      "name": "accuracy",
+      "value": 0.738,
+      "step": 4,
+      "timestamp": "2026-09-06T04:40:00"
+    },
+    {
+      "id": 70,
+      "experiment_id": 9,
+      "name": "train_loss",
+      "value": 1.54,
+      "step": 1,
+      "timestamp": "2026-09-06T09:25:00"
+    },
+    {
+      "id": 71,
+      "experiment_id": 9,
+      "name": "val_loss",
+      "value": 1.69,
+      "step": 1,
+      "timestamp": "2026-09-06T09:25:00"
+    },
+    {
+      "id": 72,
+      "experiment_id": 9,
+      "name": "accuracy",
+      "value": 0.581,
+      "step": 1,
+      "timestamp": "2026-09-06T09:25:00"
+    },
+    {
+      "id": 73,
+      "experiment_id": 9,
+      "name": "train_loss",
+      "value": 1.26,
+      "step": 2,
+      "timestamp": "2026-09-06T09:50:00"
+    },
+    {
+      "id": 74,
+      "experiment_id": 9,
+      "name": "val_loss",
+      "value": 1.41,
+      "step": 2,
+      "timestamp": "2026-09-06T09:50:00"
+    },
+    {
+      "id": 75,
+      "experiment_id": 9,
+      "name": "accuracy",
+      "value": 0.626,
+      "step": 2,
+      "timestamp": "2026-09-06T09:50:00"
+    },
+    {
+      "id": 76,
+      "experiment_id": 9,
+      "name": "train_loss",
+      "value": 0.98,
+      "step": 3,
+      "timestamp": "2026-09-06T10:15:00"
+    },
+    {
+      "id": 77,
+      "experiment_id": 9,
+      "name": "val_loss",
+      "value": 1.13,
+      "step": 3,
+      "timestamp": "2026-09-06T10:15:00"
+    },
+    {
+      "id": 78,
+      "experiment_id": 9,
+      "name": "accuracy",
+      "value": 0.671,
+      "step": 3,
+      "timestamp": "2026-09-06T10:15:00"
+    },
+    {
+      "id": 79,
+      "experiment_id": 9,
+      "name": "train_loss",
+      "value": 0.7,
+      "step": 4,
+      "timestamp": "2026-09-06T10:40:00"
+    },
+    {
+      "id": 80,
+      "experiment_id": 9,
+      "name": "val_loss",
+      "value": 0.85,
+      "step": 4,
+      "timestamp": "2026-09-06T10:40:00"
+    },
+    {
+      "id": 81,
+      "experiment_id": 9,
+      "name": "accuracy",
+      "value": 0.716,
+      "step": 4,
+      "timestamp": "2026-09-06T10:40:00"
+    },
+    {
+      "id": 82,
+      "experiment_id": 10,
+      "name": "train_loss",
+      "value": 1.76,
+      "step": 1,
+      "timestamp": "2026-09-06T15:25:00"
+    },
+    {
+      "id": 83,
+      "experiment_id": 10,
+      "name": "val_loss",
+      "value": 1.86,
+      "step": 1,
+      "timestamp": "2026-09-06T15:25:00"
+    },
+    {
+      "id": 84,
+      "experiment_id": 10,
+      "name": "accuracy",
+      "value": 0.659,
+      "step": 1,
+      "timestamp": "2026-09-06T15:25:00"
+    },
+    {
+      "id": 85,
+      "experiment_id": 10,
+      "name": "train_loss",
+      "value": 1.45,
+      "step": 2,
+      "timestamp": "2026-09-06T15:50:00"
+    },
+    {
+      "id": 86,
+      "experiment_id": 10,
+      "name": "val_loss",
+      "value": 1.55,
+      "step": 2,
+      "timestamp": "2026-09-06T15:50:00"
+    },
+    {
+      "id": 87,
+      "experiment_id": 10,
+      "name": "accuracy",
+      "value": 0.749,
+      "step": 2,
+      "timestamp": "2026-09-06T15:50:00"
+    },
+    {
+      "id": 88,
+      "experiment_id": 11,
+      "name": "train_loss",
+      "value": 1.57,
+      "step": 1,
+      "timestamp": "2026-09-06T21:25:00"
+    },
+    {
+      "id": 89,
+      "experiment_id": 11,
+      "name": "val_loss",
+      "value": 1.695,
+      "step": 1,
+      "timestamp": "2026-09-06T21:25:00"
+    },
+    {
+      "id": 90,
+      "experiment_id": 11,
+      "name": "accuracy",
+      "value": 0.702,
+      "step": 1,
+      "timestamp": "2026-09-06T21:25:00"
+    },
+    {
+      "id": 91,
+      "experiment_id": 13,
+      "name": "train_loss",
+      "value": 1.8,
+      "step": 1,
+      "timestamp": "2026-09-07T09:25:00"
+    },
+    {
+      "id": 92,
+      "experiment_id": 13,
+      "name": "val_loss",
+      "value": 1.9,
+      "step": 1,
+      "timestamp": "2026-09-07T09:25:00"
+    },
+    {
+      "id": 93,
+      "experiment_id": 13,
+      "name": "accuracy",
+      "value": 0.59,
+      "step": 1,
+      "timestamp": "2026-09-07T09:25:00"
+    },
+    {
+      "id": 94,
+      "experiment_id": 13,
+      "name": "train_loss",
+      "value": 1.52,
+      "step": 2,
+      "timestamp": "2026-09-07T09:50:00"
+    },
+    {
+      "id": 95,
+      "experiment_id": 13,
+      "name": "val_loss",
+      "value": 1.62,
+      "step": 2,
+      "timestamp": "2026-09-07T09:50:00"
+    },
+    {
+      "id": 96,
+      "experiment_id": 13,
+      "name": "accuracy",
+      "value": 0.68,
+      "step": 2,
+      "timestamp": "2026-09-07T09:50:00"
+    },
+    {
+      "id": 97,
+      "experiment_id": 14,
+      "name": "train_loss",
+      "value": 1.66,
+      "step": 1,
+      "timestamp": "2026-09-07T15:25:00"
+    },
+    {
+      "id": 98,
+      "experiment_id": 14,
+      "name": "val_loss",
+      "value": 1.785,
+      "step": 1,
+      "timestamp": "2026-09-07T15:25:00"
+    },
+    {
+      "id": 99,
+      "experiment_id": 14,
+      "name": "accuracy",
+      "value": 0.648,
+      "step": 1,
+      "timestamp": "2026-09-07T15:25:00"
+    },
+    {
+      "id": 100,
+      "experiment_id": 14,
+      "name": "train_loss",
+      "value": 1.35,
+      "step": 2,
+      "timestamp": "2026-09-07T15:50:00"
+    },
+    {
+      "id": 101,
+      "experiment_id": 14,
+      "name": "val_loss",
+      "value": 1.475,
+      "step": 2,
+      "timestamp": "2026-09-07T15:50:00"
+    },
+    {
+      "id": 102,
+      "experiment_id": 14,
+      "name": "accuracy",
+      "value": 0.738,
+      "step": 2,
+      "timestamp": "2026-09-07T15:50:00"
+    },
+    {
+      "id": 103,
+      "experiment_id": 15,
+      "name": "train_loss",
+      "value": 1.52,
+      "step": 1,
+      "timestamp": "2026-09-07T21:25:00"
+    },
+    {
+      "id": 104,
+      "experiment_id": 15,
+      "name": "val_loss",
+      "value": 1.67,
+      "step": 1,
+      "timestamp": "2026-09-07T21:25:00"
+    },
+    {
+      "id": 105,
+      "experiment_id": 15,
+      "name": "accuracy",
+      "value": 0.641,
+      "step": 1,
+      "timestamp": "2026-09-07T21:25:00"
+    },
+    {
+      "id": 106,
+      "experiment_id": 15,
+      "name": "train_loss",
+      "value": 1.18,
+      "step": 2,
+      "timestamp": "2026-09-07T21:50:00"
+    },
+    {
+      "id": 107,
+      "experiment_id": 15,
+      "name": "val_loss",
+      "value": 1.33,
+      "step": 2,
+      "timestamp": "2026-09-07T21:50:00"
+    },
+    {
+      "id": 108,
+      "experiment_id": 15,
+      "name": "accuracy",
+      "value": 0.731,
+      "step": 2,
+      "timestamp": "2026-09-07T21:50:00"
+    },
+    {
+      "id": 109,
+      "experiment_id": 16,
+      "name": "train_loss",
+      "value": 1.74,
+      "step": 1,
+      "timestamp": "2026-09-08T03:25:00"
+    },
+    {
+      "id": 110,
+      "experiment_id": 16,
+      "name": "val_loss",
+      "value": 1.84,
+      "step": 1,
+      "timestamp": "2026-09-08T03:25:00"
+    },
+    {
+      "id": 111,
+      "experiment_id": 16,
+      "name": "accuracy",
+      "value": 0.629,
+      "step": 1,
+      "timestamp": "2026-09-08T03:25:00"
+    },
+    {
+      "id": 112,
+      "experiment_id": 16,
+      "name": "train_loss",
+      "value": 1.37,
+      "step": 2,
+      "timestamp": "2026-09-08T03:50:00"
+    },
+    {
+      "id": 113,
+      "experiment_id": 16,
+      "name": "val_loss",
+      "value": 1.47,
+      "step": 2,
+      "timestamp": "2026-09-08T03:50:00"
+    },
+    {
+      "id": 114,
+      "experiment_id": 16,
+      "name": "accuracy",
+      "value": 0.689,
+      "step": 2,
+      "timestamp": "2026-09-08T03:50:00"
+    },
+    {
+      "id": 115,
+      "experiment_id": 16,
+      "name": "train_loss",
+      "value": 1.0,
+      "step": 3,
+      "timestamp": "2026-09-08T04:15:00"
+    },
+    {
+      "id": 116,
+      "experiment_id": 16,
+      "name": "val_loss",
+      "value": 1.1,
+      "step": 3,
+      "timestamp": "2026-09-08T04:15:00"
+    },
+    {
+      "id": 117,
+      "experiment_id": 16,
+      "name": "accuracy",
+      "value": 0.749,
+      "step": 3,
+      "timestamp": "2026-09-08T04:15:00"
+    },
+    {
+      "id": 118,
+      "experiment_id": 17,
+      "name": "train_loss",
+      "value": 1.72,
+      "step": 1,
+      "timestamp": "2026-09-08T09:25:00"
+    },
+    {
+      "id": 119,
+      "experiment_id": 17,
+      "name": "val_loss",
+      "value": 1.845,
+      "step": 1,
+      "timestamp": "2026-09-08T09:25:00"
+    },
+    {
+      "id": 120,
+      "experiment_id": 17,
+      "name": "accuracy",
+      "value": 0.657,
+      "step": 1,
+      "timestamp": "2026-09-08T09:25:00"
+    },
+    {
+      "id": 121,
+      "experiment_id": 17,
+      "name": "train_loss",
+      "value": 1.44,
+      "step": 2,
+      "timestamp": "2026-09-08T09:50:00"
+    },
+    {
+      "id": 122,
+      "experiment_id": 17,
+      "name": "val_loss",
+      "value": 1.565,
+      "step": 2,
+      "timestamp": "2026-09-08T09:50:00"
+    },
+    {
+      "id": 123,
+      "experiment_id": 17,
+      "name": "accuracy",
+      "value": 0.717,
+      "step": 2,
+      "timestamp": "2026-09-08T09:50:00"
+    },
+    {
+      "id": 124,
+      "experiment_id": 17,
+      "name": "train_loss",
+      "value": 1.16,
+      "step": 3,
+      "timestamp": "2026-09-08T10:15:00"
+    },
+    {
+      "id": 125,
+      "experiment_id": 17,
+      "name": "val_loss",
+      "value": 1.285,
+      "step": 3,
+      "timestamp": "2026-09-08T10:15:00"
+    },
+    {
+      "id": 126,
+      "experiment_id": 17,
+      "name": "accuracy",
+      "value": 0.777,
+      "step": 3,
+      "timestamp": "2026-09-08T10:15:00"
+    },
+    {
+      "id": 127,
+      "experiment_id": 18,
+      "name": "train_loss",
+      "value": 1.53,
+      "step": 1,
+      "timestamp": "2026-09-08T15:25:00"
+    },
+    {
+      "id": 128,
+      "experiment_id": 18,
+      "name": "val_loss",
+      "value": 1.68,
+      "step": 1,
+      "timestamp": "2026-09-08T15:25:00"
+    },
+    {
+      "id": 129,
+      "experiment_id": 18,
+      "name": "accuracy",
+      "value": 0.665,
+      "step": 1,
+      "timestamp": "2026-09-08T15:25:00"
+    },
+    {
+      "id": 130,
+      "experiment_id": 18,
+      "name": "train_loss",
+      "value": 1.22,
+      "step": 2,
+      "timestamp": "2026-09-08T15:50:00"
+    },
+    {
+      "id": 131,
+      "experiment_id": 18,
+      "name": "val_loss",
+      "value": 1.37,
+      "step": 2,
+      "timestamp": "2026-09-08T15:50:00"
+    },
+    {
+      "id": 132,
+      "experiment_id": 18,
+      "name": "accuracy",
+      "value": 0.725,
+      "step": 2,
+      "timestamp": "2026-09-08T15:50:00"
+    },
+    {
+      "id": 133,
+      "experiment_id": 18,
+      "name": "train_loss",
+      "value": 0.91,
+      "step": 3,
+      "timestamp": "2026-09-08T16:15:00"
+    },
+    {
+      "id": 134,
+      "experiment_id": 18,
+      "name": "val_loss",
+      "value": 1.06,
+      "step": 3,
+      "timestamp": "2026-09-08T16:15:00"
+    },
+    {
+      "id": 135,
+      "experiment_id": 18,
+      "name": "accuracy",
+      "value": 0.785,
+      "step": 3,
+      "timestamp": "2026-09-08T16:15:00"
+    },
+    {
+      "id": 136,
+      "experiment_id": 19,
+      "name": "train_loss",
+      "value": 1.75,
+      "step": 1,
+      "timestamp": "2026-09-08T21:25:00"
+    },
+    {
+      "id": 137,
+      "experiment_id": 19,
+      "name": "val_loss",
+      "value": 1.85,
+      "step": 1,
+      "timestamp": "2026-09-08T21:25:00"
+    },
+    {
+      "id": 138,
+      "experiment_id": 19,
+      "name": "accuracy",
+      "value": 0.56,
+      "step": 1,
+      "timestamp": "2026-09-08T21:25:00"
+    },
+    {
+      "id": 139,
+      "experiment_id": 19,
+      "name": "train_loss",
+      "value": 1.41,
+      "step": 2,
+      "timestamp": "2026-09-08T21:50:00"
+    },
+    {
+      "id": 140,
+      "experiment_id": 19,
+      "name": "val_loss",
+      "value": 1.51,
+      "step": 2,
+      "timestamp": "2026-09-08T21:50:00"
+    },
+    {
+      "id": 141,
+      "experiment_id": 19,
+      "name": "accuracy",
+      "value": 0.605,
+      "step": 2,
+      "timestamp": "2026-09-08T21:50:00"
+    },
+    {
+      "id": 142,
+      "experiment_id": 19,
+      "name": "train_loss",
+      "value": 1.07,
+      "step": 3,
+      "timestamp": "2026-09-08T22:15:00"
+    },
+    {
+      "id": 143,
+      "experiment_id": 19,
+      "name": "val_loss",
+      "value": 1.17,
+      "step": 3,
+      "timestamp": "2026-09-08T22:15:00"
+    },
+    {
+      "id": 144,
+      "experiment_id": 19,
+      "name": "accuracy",
+      "value": 0.65,
+      "step": 3,
+      "timestamp": "2026-09-08T22:15:00"
+    },
+    {
+      "id": 145,
+      "experiment_id": 19,
+      "name": "train_loss",
+      "value": 0.73,
+      "step": 4,
+      "timestamp": "2026-09-08T22:40:00"
+    },
+    {
+      "id": 146,
+      "experiment_id": 19,
+      "name": "val_loss",
+      "value": 0.83,
+      "step": 4,
+      "timestamp": "2026-09-08T22:40:00"
+    },
+    {
+      "id": 147,
+      "experiment_id": 19,
+      "name": "accuracy",
+      "value": 0.695,
+      "step": 4,
+      "timestamp": "2026-09-08T22:40:00"
+    },
+    {
+      "id": 148,
+      "experiment_id": 20,
+      "name": "train_loss",
+      "value": 1.61,
+      "step": 1,
+      "timestamp": "2026-09-09T03:25:00"
+    },
+    {
+      "id": 149,
+      "experiment_id": 20,
+      "name": "val_loss",
+      "value": 1.735,
+      "step": 1,
+      "timestamp": "2026-09-09T03:25:00"
+    },
+    {
+      "id": 150,
+      "experiment_id": 20,
+      "name": "accuracy",
+      "value": 0.603,
+      "step": 1,
+      "timestamp": "2026-09-09T03:25:00"
+    },
+    {
+      "id": 151,
+      "experiment_id": 20,
+      "name": "train_loss",
+      "value": 1.24,
+      "step": 2,
+      "timestamp": "2026-09-09T03:50:00"
+    },
+    {
+      "id": 152,
+      "experiment_id": 20,
+      "name": "val_loss",
+      "value": 1.365,
+      "step": 2,
+      "timestamp": "2026-09-09T03:50:00"
+    },
+    {
+      "id": 153,
+      "experiment_id": 20,
+      "name": "accuracy",
+      "value": 0.648,
+      "step": 2,
+      "timestamp": "2026-09-09T03:50:00"
+    },
+    {
+      "id": 154,
+      "experiment_id": 20,
+      "name": "train_loss",
+      "value": 0.87,
+      "step": 3,
+      "timestamp": "2026-09-09T04:15:00"
+    },
+    {
+      "id": 155,
+      "experiment_id": 20,
+      "name": "val_loss",
+      "value": 0.995,
+      "step": 3,
+      "timestamp": "2026-09-09T04:15:00"
+    },
+    {
+      "id": 156,
+      "experiment_id": 20,
+      "name": "accuracy",
+      "value": 0.693,
+      "step": 3,
+      "timestamp": "2026-09-09T04:15:00"
+    },
+    {
+      "id": 157,
+      "experiment_id": 20,
+      "name": "train_loss",
+      "value": 0.5,
+      "step": 4,
+      "timestamp": "2026-09-09T04:40:00"
+    },
+    {
+      "id": 158,
+      "experiment_id": 20,
+      "name": "val_loss",
+      "value": 0.625,
+      "step": 4,
+      "timestamp": "2026-09-09T04:40:00"
+    },
+    {
+      "id": 159,
+      "experiment_id": 20,
+      "name": "accuracy",
+      "value": 0.738,
+      "step": 4,
+      "timestamp": "2026-09-09T04:40:00"
+    },
+    {
+      "id": 160,
+      "experiment_id": 21,
+      "name": "train_loss",
+      "value": 1.59,
+      "step": 1,
+      "timestamp": "2026-09-09T09:25:00"
+    },
+    {
+      "id": 161,
+      "experiment_id": 21,
+      "name": "val_loss",
+      "value": 1.74,
+      "step": 1,
+      "timestamp": "2026-09-09T09:25:00"
+    },
+    {
+      "id": 162,
+      "experiment_id": 21,
+      "name": "accuracy",
+      "value": 0.581,
+      "step": 1,
+      "timestamp": "2026-09-09T09:25:00"
+    },
+    {
+      "id": 163,
+      "experiment_id": 21,
+      "name": "train_loss",
+      "value": 1.31,
+      "step": 2,
+      "timestamp": "2026-09-09T09:50:00"
+    },
+    {
+      "id": 164,
+      "experiment_id": 21,
+      "name": "val_loss",
+      "value": 1.46,
+      "step": 2,
+      "timestamp": "2026-09-09T09:50:00"
+    },
+    {
+      "id": 165,
+      "experiment_id": 21,
+      "name": "accuracy",
+      "value": 0.626,
+      "step": 2,
+      "timestamp": "2026-09-09T09:50:00"
+    },
+    {
+      "id": 166,
+      "experiment_id": 21,
+      "name": "train_loss",
+      "value": 1.03,
+      "step": 3,
+      "timestamp": "2026-09-09T10:15:00"
+    },
+    {
+      "id": 167,
+      "experiment_id": 21,
+      "name": "val_loss",
+      "value": 1.18,
+      "step": 3,
+      "timestamp": "2026-09-09T10:15:00"
+    },
+    {
+      "id": 168,
+      "experiment_id": 21,
+      "name": "accuracy",
+      "value": 0.671,
+      "step": 3,
+      "timestamp": "2026-09-09T10:15:00"
+    },
+    {
+      "id": 169,
+      "experiment_id": 21,
+      "name": "train_loss",
+      "value": 0.75,
+      "step": 4,
+      "timestamp": "2026-09-09T10:40:00"
+    },
+    {
+      "id": 170,
+      "experiment_id": 21,
+      "name": "val_loss",
+      "value": 0.9,
+      "step": 4,
+      "timestamp": "2026-09-09T10:40:00"
+    },
+    {
+      "id": 171,
+      "experiment_id": 21,
+      "name": "accuracy",
+      "value": 0.716,
+      "step": 4,
+      "timestamp": "2026-09-09T10:40:00"
+    },
+    {
+      "id": 172,
+      "experiment_id": 22,
+      "name": "train_loss",
+      "value": 1.81,
+      "step": 1,
+      "timestamp": "2026-09-09T15:25:00"
+    },
+    {
+      "id": 173,
+      "experiment_id": 22,
+      "name": "val_loss",
+      "value": 1.91,
+      "step": 1,
+      "timestamp": "2026-09-09T15:25:00"
+    },
+    {
+      "id": 174,
+      "experiment_id": 22,
+      "name": "accuracy",
+      "value": 0.659,
+      "step": 1,
+      "timestamp": "2026-09-09T15:25:00"
+    },
+    {
+      "id": 175,
+      "experiment_id": 22,
+      "name": "train_loss",
+      "value": 1.5,
+      "step": 2,
+      "timestamp": "2026-09-09T15:50:00"
+    },
+    {
+      "id": 176,
+      "experiment_id": 22,
+      "name": "val_loss",
+      "value": 1.6,
+      "step": 2,
+      "timestamp": "2026-09-09T15:50:00"
+    },
+    {
+      "id": 177,
+      "experiment_id": 22,
+      "name": "accuracy",
+      "value": 0.749,
+      "step": 2,
+      "timestamp": "2026-09-09T15:50:00"
+    },
+    {
+      "id": 178,
+      "experiment_id": 23,
+      "name": "train_loss",
+      "value": 1.62,
+      "step": 1,
+      "timestamp": "2026-09-09T21:25:00"
+    },
+    {
+      "id": 179,
+      "experiment_id": 23,
+      "name": "val_loss",
+      "value": 1.745,
+      "step": 1,
+      "timestamp": "2026-09-09T21:25:00"
+    },
+    {
+      "id": 180,
+      "experiment_id": 23,
+      "name": "accuracy",
+      "value": 0.702,
+      "step": 1,
+      "timestamp": "2026-09-09T21:25:00"
+    }
+  ]
+}

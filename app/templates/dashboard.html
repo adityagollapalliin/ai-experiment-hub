@@ -8,20 +8,26 @@ Dashboard | AI Experiment Hub
 
 {% block content %}
 
+
 <section class="page-header">
 
     <div>
-        <h2>Dashboard</h2>
+
+        <h2>
+            Dashboard
+        </h2>
 
         <p>
             Overview of your machine learning experiments.
         </p>
+
     </div>
 
 </section>
 
 
 <section class="stats-grid">
+
 
     <div class="stat-card">
 
@@ -87,6 +93,7 @@ Dashboard | AI Experiment Hub
 
     </div>
 
+
 </section>
 
 
@@ -103,11 +110,13 @@ Dashboard | AI Experiment Hub
 
     {% if recent_experiments %}
 
+
     <div class="table-wrapper">
 
         <table>
 
             <thead>
+
                 <tr>
 
                     <th>
@@ -135,26 +144,39 @@ Dashboard | AI Experiment Hub
                     </th>
 
                 </tr>
+
             </thead>
 
 
             <tbody>
 
+
                 {% for experiment in recent_experiments %}
+
 
                 <tr>
 
                     <td>
-                        {{ experiment.name }}
+
+                        <a
+                            href="/experiments/{{ experiment.id }}"
+                            class="experiment-link"
+                        >
+                            {{ experiment.name }}
+                        </a>
+
                     </td>
+
 
                     <td>
                         {{ experiment.model_name }}
                     </td>
 
+
                     <td>
                         {{ experiment.dataset_name }}
                     </td>
+
 
                     <td>
 
@@ -165,6 +187,7 @@ Dashboard | AI Experiment Hub
                         </span>
 
                     </td>
+
 
                     <td>
 
@@ -183,6 +206,7 @@ Dashboard | AI Experiment Hub
                         {% endif %}
 
                     </td>
+
 
                     <td>
 
@@ -204,7 +228,9 @@ Dashboard | AI Experiment Hub
 
                 </tr>
 
+
                 {% endfor %}
+
 
             </tbody>
 
@@ -215,11 +241,14 @@ Dashboard | AI Experiment Hub
 
     {% else %}
 
-        <p>
-            No experiments found.
-        </p>
+
+    <p>
+        No experiments found.
+    </p>
+
 
     {% endif %}
+
 
 </section>
 

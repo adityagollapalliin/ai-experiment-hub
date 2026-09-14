@@ -1,0 +1,634 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+{{ experiment.name }} | AI Experiment Hub
+{% endblock %}
+
+
+{% block content %}
+
+
+<section class="page-header">
+
+    <a
+        href="/dashboard"
+        class="back-link"
+    >
+        ← Back to Dashboard
+    </a>
+
+
+    <div class="experiment-heading">
+
+        <div>
+
+            <h2>
+                {{ experiment.name }}
+            </h2>
+
+            <p>
+                Experiment #{{ experiment.id }}
+            </p>
+
+        </div>
+
+
+        <span
+            class="status status-{{ experiment.status }}"
+        >
+            {{ experiment.status }}
+        </span>
+
+    </div>
+
+</section>
+
+
+<section class="detail-grid">
+
+
+    <div class="panel">
+
+        <div class="panel-header">
+
+            <h3>
+                Experiment Information
+            </h3>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                Model
+            </span>
+
+            <strong>
+                {{ experiment.model_name }}
+            </strong>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                Model Repository
+            </span>
+
+            <strong>
+                {{ experiment.model_repo or "—" }}
+            </strong>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                Dataset
+            </span>
+
+            <strong>
+                {{ experiment.dataset_name }}
+            </strong>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                Dataset Repository
+            </span>
+
+            <strong>
+                {{ experiment.dataset_repo or "—" }}
+            </strong>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                Training Type
+            </span>
+
+            <strong>
+                {{ experiment.training_type or "—" }}
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="panel">
+
+        <div class="panel-header">
+
+            <h3>
+                Training Configuration
+            </h3>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                Learning Rate
+            </span>
+
+            <strong>
+
+                {% if experiment.learning_rate is not none %}
+
+                    {{ experiment.learning_rate }}
+
+                {% else %}
+
+                    —
+
+                {% endif %}
+
+            </strong>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                Batch Size
+            </span>
+
+            <strong>
+
+                {% if experiment.batch_size is not none %}
+
+                    {{ experiment.batch_size }}
+
+                {% else %}
+
+                    —
+
+                {% endif %}
+
+            </strong>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                Epochs
+            </span>
+
+            <strong>
+
+                {% if experiment.epochs is not none %}
+
+                    {{ experiment.epochs }}
+
+                {% else %}
+
+                    —
+
+                {% endif %}
+
+            </strong>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                Optimizer
+            </span>
+
+            <strong>
+                {{ experiment.optimizer or "—" }}
+            </strong>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                LoRA Rank
+            </span>
+
+            <strong>
+
+                {% if experiment.lora_rank is not none %}
+
+                    {{ experiment.lora_rank }}
+
+                {% else %}
+
+                    —
+
+                {% endif %}
+
+            </strong>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                Gradient Accumulation
+            </span>
+
+            <strong>
+
+                {% if experiment.gradient_accumulation_steps is not none %}
+
+                    {{ experiment.gradient_accumulation_steps }}
+
+                {% else %}
+
+                    —
+
+                {% endif %}
+
+            </strong>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                Max Sequence Length
+            </span>
+
+            <strong>
+
+                {% if experiment.max_sequence_length is not none %}
+
+                    {{ experiment.max_sequence_length }}
+
+                {% else %}
+
+                    —
+
+                {% endif %}
+
+            </strong>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                Seed
+            </span>
+
+            <strong>
+
+                {% if experiment.seed is not none %}
+
+                    {{ experiment.seed }}
+
+                {% else %}
+
+                    —
+
+                {% endif %}
+
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<section class="detail-grid">
+
+
+    <div class="panel">
+
+        <div class="panel-header">
+
+            <h3>
+                Results
+            </h3>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                Final Training Loss
+            </span>
+
+            <strong>
+
+                {% if experiment.final_train_loss is not none %}
+
+                    {{
+                        "%.4f"|format(
+                            experiment.final_train_loss
+                        )
+                    }}
+
+                {% else %}
+
+                    —
+
+                {% endif %}
+
+            </strong>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                Evaluation Accuracy
+            </span>
+
+            <strong>
+
+                {% if experiment.eval_accuracy is not none %}
+
+                    {{
+                        "%.2f"|format(
+                            experiment.eval_accuracy * 100
+                        )
+                    }}%
+
+                {% else %}
+
+                    —
+
+                {% endif %}
+
+            </strong>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                Training Duration
+            </span>
+
+            <strong>
+
+                {% if experiment.training_duration_minutes is not none %}
+
+                    {{
+                        experiment.training_duration_minutes
+                    }}
+                    minutes
+
+                {% else %}
+
+                    —
+
+                {% endif %}
+
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="panel">
+
+        <div class="panel-header">
+
+            <h3>
+                Hardware
+            </h3>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                GPU
+            </span>
+
+            <strong>
+                {{ experiment.gpu or "—" }}
+            </strong>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                Created
+            </span>
+
+            <strong>
+
+                {% if experiment.created_at %}
+
+                    {{
+                        experiment.created_at.strftime(
+                            "%Y-%m-%d %H:%M"
+                        )
+                    }}
+
+                {% else %}
+
+                    —
+
+                {% endif %}
+
+            </strong>
+
+        </div>
+
+
+        <div class="detail-row">
+
+            <span>
+                Finished
+            </span>
+
+            <strong>
+
+                {% if experiment.finished_at %}
+
+                    {{
+                        experiment.finished_at.strftime(
+                            "%Y-%m-%d %H:%M"
+                        )
+                    }}
+
+                {% else %}
+
+                    —
+
+                {% endif %}
+
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+{% if experiment.notes %}
+
+
+<section class="panel notes-panel">
+
+    <div class="panel-header">
+
+        <h3>
+            Notes
+        </h3>
+
+    </div>
+
+    <p>
+        {{ experiment.notes }}
+    </p>
+
+</section>
+
+
+{% endif %}
+
+
+<section class="panel metrics-panel">
+
+
+    <div class="panel-header">
+
+        <h3>
+            Recorded Metrics
+        </h3>
+
+    </div>
+
+
+    {% if metrics %}
+
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Step
+                    </th>
+
+                    <th>
+                        Metric
+                    </th>
+
+                    <th>
+                        Value
+                    </th>
+
+                    <th>
+                        Timestamp
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+
+                {% for metric in metrics %}
+
+
+                <tr>
+
+                    <td>
+                        {{ metric.step }}
+                    </td>
+
+                    <td>
+                        {{ metric.name }}
+                    </td>
+
+                    <td>
+                        {{ "%.4f"|format(metric.value) }}
+                    </td>
+
+                    <td>
+
+                        {% if metric.timestamp %}
+
+                            {{
+                                metric.timestamp.strftime(
+                                    "%Y-%m-%d %H:%M"
+                                )
+                            }}
+
+                        {% else %}
+
+                            —
+
+                        {% endif %}
+
+                    </td>
+
+                </tr>
+
+
+                {% endfor %}
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    {% else %}
+
+
+    <p class="empty-state">
+        No metrics have been recorded for this experiment.
+    </p>
+
+
+    {% endif %}
+
+
+</section>
+
+
+{% endblock %}
